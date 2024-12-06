@@ -1,0 +1,18 @@
+
+
+# Node.js modules
+/node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+#Environmental variables
+.env
+
+#Others
+.hintrc
+.vercel
