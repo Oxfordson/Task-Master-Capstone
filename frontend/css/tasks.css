@@ -1,0 +1,158 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Main container */
+.taskContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+.head_logOut{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Task form container */
+#add-task-container, #logout-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#add-task-container input,
+#task-description,
+#task-due-date {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-task-container button,
+#logout-container button {
+    background-color: #5c6bc0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#add-task-container button:hover,
+#logout-container button:hover {
+    background-color: #3f4f97;
+}
+#add-task-container{
+    height: 100%;
+}
+
+/* Task list container */
+#task-list-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#fetch-tasks {
+    background-color: #5c6bc0;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#fetch-tasks:hover {
+    background-color: #3f4f97;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.task-info strong {
+    color: #333;
+}
+
+#task-list li button {
+    background-color: #ff7043;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li button:hover {
+    background-color: #f4511e;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .taskContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #add-task-container,
+    #task-list-container {
+        width: 100%; 
+    }
+
+    #task-list li {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        display: flex;
+    }
+}
